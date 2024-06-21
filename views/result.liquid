@@ -1,0 +1,12 @@
+{% layout "default-layout.liquid" %}
+{% block %}
+    <h1>Result</h1>
+    {% for item in result %}
+        <p>Первое значение: {{ item.fvalue }}</p>
+        <p>Операция: {{ item.operation }}</p>
+        <p>Второе значение: {{ item.value }}</p>
+        <p>Результат: {{ item.result }}</p>
+        <br>
+    {% endfor %}
+    {{message}}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% layout "default-layout.liquid" %}
+{% block %}
+<link href='/s/style.css' rel='stylesheet'>
+<div>
+    <h1>Calculator</h1>
+    <form action="/" method="get">
+        <input type="text" name="fvalue" value="{{first}}" hidden>
+        <input type="text" name="curSign" value="{{curSign}}" hidden>
+        <input type="text" class="skp" name="value" value="{{item}}">
+
+        {% for i in (0..9) %}
+            <input type="submit" name="digit" value="{{i}}">
+        {% endfor %}
+
+        {% for i in sign %}
+            <input type="submit" name="sign" value="{{i.key}}">
+        {% endfor %}
+        <input type="submit" name="sign" value="=">
+    </form>
+    {{message}}
+    </div>
+{% endblock %}

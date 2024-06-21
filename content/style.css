@@ -1,0 +1,13 @@
+body{
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skp{
+    grid-column: 1 / -1;
+}
